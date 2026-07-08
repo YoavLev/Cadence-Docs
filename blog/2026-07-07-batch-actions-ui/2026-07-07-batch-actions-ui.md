@@ -25,7 +25,7 @@ With **Batch Actions**, Cadence Web lets you select a group of workflows and act
 
 ## What Is a Batch Action?
 
-A Batch Action is a cadence system workflow, able to act on multiple workflow executions simultaneously. Instead of acting on one workflow at a time, you define a **target set**—a search query that matches workflows by status, type, domain, or any combination—and then dispatch a single action that Cadence fans out across all matching executions.
+A Batch Action is a Cadence system workflow, able to act on multiple workflow executions simultaneously. Instead of acting on one workflow at a time, you define a **target set**—a search query that matches workflows by status, type, domain, or any combination—and then dispatch a single action that Cadence fans out across all matching executions.
 
 Under the hood, Cadence's batch processing system handles the fan-out reliably and at scale. From the Web UI's perspective, you describe *what* to act on and *which action*, and Cadence takes care of the rest.
 
@@ -55,13 +55,13 @@ Batch Actions require two things to be in place:
 Batch Actions live in their own **tab on the Domain page**. You can open it two ways:
 
 - Navigate directly to the **Batch Actions tab** on the Domain page
-- Use the **Domain Actions dropdown** in the top-right corner to create a new batch action, which opens the tab automatically
+- Use the **Domain Actions dropdown** in the top-right corner to create a new Batch Action, which opens the tab automatically
 
 ![Access to Batch Actions](./batch-access.png)
 
 ### Creating a Draft
 
-Every batch action starts as a **draft**. This gives you the chance to define and review the target set before anything is applied to your workflows.
+Every Batch Action starts as a **draft**. This gives you the chance to define and review the target set before anything is applied to your workflows.
 
 You have two ways to select the target workflows:
 
@@ -70,19 +70,19 @@ You have two ways to select the target workflows:
 
 ![Draft Editor](./batch-draft.png)
 
-Once the target set is defined,fill in any required parameters (signal name and payload for signals), choose the action (Terminate, Signal, or Cancel), and optionally set the **RPS** (workflows processed per second) to control the rollout rate.
+Once the target set is defined, fill in any required parameters (signal name and payload for signals), choose the action (Terminate, Signal, or Cancel), and optionally set the **RPS** (workflows processed per second) to control the rollout rate.
 
 
 ### Deep Linking
 
-Drafts are shareable. The tab supports **deep linking**, so you can copy the URL of a draft and send it to a teammate for review before submitting, or link directly to a specific batch action's details page.
+Drafts are shareable. The tab supports **deep linking**, so you can copy the URL of a draft and send it to a teammate for review before submitting, or link directly to a specific Batch Action's details page.
 
 ### Tracking Progress
 
-Submitted batch actions appear in the **sidebar** of the Batch Actions tab as an action history. Click any entry to open its details:
+Submitted Batch Actions appear in the **sidebar** of the Batch Actions tab as an action history. Click any entry to open its details:
 
 - Total workflows matched
-- How many have been succeeded or failed so far.
+- How many have succeeded or failed so far
 
 For running actions, you are able to change the **RPS** param mid-flight. This is useful for very large batches that seem to progress too slowly. 
 
